@@ -70,7 +70,7 @@ class WeatherAPI {
         
         let weather = Weather(
             city: json["name"] as! String,
-            currentTemp: mainDict["temp"] as! Float,
+            currentTemp: mainDict["temp"]?.floatValue as! Float,
             conditions: weatherDict["main"] as! String,
             icon: weatherDict["icon"] as! String
         )
